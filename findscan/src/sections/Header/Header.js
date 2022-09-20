@@ -49,12 +49,6 @@ const HeaderSection = (container) => {
 
         headerScrollStyles();
         window.addEventListener('scroll', headerScrollStyles);
-
-        /* add margin for the main container */
-        const mainContainer = document.querySelector('.main');
-        const headerHeight = header.clientHeight;
-
-        mainContainer.style.paddingTop = `${headerHeight}px`;
     });
 };
 

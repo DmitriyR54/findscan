@@ -14,7 +14,7 @@
 
 /* buttons */
 .btn {
-    display: inline-block;
+    display: block;
     padding: 0.5rem 1.5rem;
     color: $white;
     background-color: transparent;
@@ -39,5 +39,69 @@
         color: $light-blue;
         background-color: $white;
         border-color: $light-blue;
+    }
+}
+
+/* background for an intro section */
+@mixin introBackground {
+    background-color: $blue;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 100%;
+        background-image: radial-gradient(rgba($light-blue, 0.7) 20%, transparent 70%);
+        transform: translateY(50%);
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+/* smaller version for smaller screens */
+@mixin introBackgroundMobile {
+    &::after {
+        background-image: radial-gradient(rgba($light-blue, 0.4) 20%, transparent 70%);
+        transform: translateY(20%);
+    }
+}
+
+/* title */
+.title {
+    color: $blue;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 120%;
+    text-align: center;
+
+    .title-highlight {
+        color: $light-blue;
+    }
+}
+
+/* subtitle */
+.subtitle {
+    display: block;
+    margin-top: 1rem;
+    color: $grey;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 140%;
+    text-align: center;
+}
+
+/* SCREEN ADAPTATION */
+/* mobile phones */
+@media (max-width: $phone) {
+    /* title */
+    .title {
+        font-size: 2rem;
+    }
+
+    /* subtitle */
+    .subtitle {
+        font-size: 0.9rem;
     }
 }

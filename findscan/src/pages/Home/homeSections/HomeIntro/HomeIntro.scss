@@ -1,0 +1,162 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/components.scss';
+
+.homeIntro {
+    @include introBackground;
+}
+
+.homeIntro__inner {
+    padding: 6.5rem 0 18rem;
+    position: relative;
+    z-index: 2;
+}
+
+.homeIntro__title {
+    color: $white;
+}
+
+.homeIntro__title,
+.homeIntro__subtitle {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* learn more and video links */
+.homeIntro__links {
+    display: flex;
+    justify-content: center;
+    column-gap: 0.75rem;
+    margin-top: 1.5rem;
+
+    .btn {
+        display: flex;
+        align-items: center;
+    }
+
+    /* video link styles */
+    .btn-primary {
+        padding-left: 0.75rem;
+
+        #homeIntro__videoIcon {
+            width: 1.5rem;
+            margin-right: 0.5rem;
+
+            circle {
+                transition: $transitionRegular;
+            }
+        }
+
+        &:hover {
+            #homeIntro__videoIcon {
+                circle {
+                    fill: rgba($light-blue, 0.5);
+                }
+            }
+        }
+    }
+}
+
+/* second section with images of laptop and logotypes */
+.homeIntro__laptop {
+    display: flex !important;
+    justify-content: center;
+    width: 50rem !important;
+    margin: -15rem auto 0;
+}
+
+/* images of companies */
+.homeIntro__partners {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+
+    .image {
+        max-width: 7rem;
+        transition: $transitionRegular;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+/* ANIMATIONS */
+@keyframes movePartners {
+    0% {
+        transform: translate3d(0%, 0, 0);
+    }
+    40%,
+    50% {
+        transform: translate3d(-100%, 0, 0);
+    }
+    90%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: $smallScreen) {
+    .homeIntro__title,
+    .homeIntro__subtitle {
+        max-width: 80%;
+    }
+
+    /* images of companies */
+    .homeIntro__partners {
+        .image {
+            max-width: 5rem;
+        }
+    }
+}
+
+/* tablets */
+@media (max-width: $tablet) {
+    /* second section with images of laptop and logotypes */
+    .homeIntro__pictures .container {
+        overflow: hidden;
+    }
+
+    /* images of companies */
+    .homeIntro__partners {
+        animation: movePartners 25s linear infinite;
+
+        .image {
+            display: flex !important;
+            justify-content: center;
+            max-width: 33.333% !important;
+            min-width: 33.333% !important;
+
+            img {
+                width: 70%;
+            }
+        }
+    }
+}
+
+/* mobile phones */
+@media (max-width: $phone) {
+    /* use smaller background */
+    .homeIntro {
+        @include introBackgroundMobile;
+    }
+
+    .homeIntro__inner {
+        padding: 10rem 0 15rem;
+    }
+
+    .homeIntro__title,
+    .homeIntro__subtitle {
+        max-width: 90%;
+    }
+
+    .homeIntro__links {
+        margin-top: 3rem;
+    }
+
+    .homeIntro__laptop {
+        margin-top: -10rem;
+    }
+}

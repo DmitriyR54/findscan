@@ -7,6 +7,7 @@ import 'Src/styles/styles.scss';
 import 'Src/fonts/fonts.scss';
 // sections
 import { HeaderSection } from 'Sections/Header/Header';
+import { HomeIntroSection } from './homeSections/HomeIntro/HomeIntro';
 // components
 import LazyLoad from 'Components/LazyLoad/LazyLoad';
 
@@ -17,6 +18,7 @@ const mainContainer = (container) => {
     let mainTag = document.createElement('main');
     mainTag.className = 'main';
     // sections
+    HomeIntroSection(mainTag);
 
     return container.appendChild(mainTag);
 };
