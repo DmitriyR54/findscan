@@ -5,13 +5,13 @@
     /* reset default styles */
     margin: 0;
     padding: 0;
-    color: #fff;
+    background-color: transparent;
     border: none;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     /* set common styles */
-    font-family: 'Roboto', sans-serif;
+    font-family: $poppins;
     font-size: inherit;
 }
 

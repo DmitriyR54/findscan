@@ -1,5 +1,7 @@
 // libraries
 import 'core-js/actual';
+import 'overlayscrollbars/overlayscrollbars.css';
+import { OverlayScrollbars } from 'overlayscrollbars';
 // styles
 import 'Src/styles/styles.scss';
 import 'Src/fonts/fonts.scss';
@@ -25,3 +27,10 @@ mainContainer(bodyContainer);
 
 // components
 LazyLoad();
+
+window.addEventListener('DOMContentLoaded', () => {
+    /* use a custom scrollbar but only on desktop devices */
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        const osInstance = OverlayScrollbars(document.querySelector('body'), {});
+    }
+});

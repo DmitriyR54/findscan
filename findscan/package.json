@@ -49,5 +49,8 @@
         "webpack-cli": "^4.9.2",
         "webpack-dev-server": "^4.8.1",
         "xml-loader": "^1.2.1"
+    },
+    "dependencies": {
+        "overlayscrollbars": "^2.0.0-beta.2"
     }
 }
