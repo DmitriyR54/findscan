@@ -6,7 +6,7 @@
 }
 
 .homeIntro__inner {
-    padding: 6.5rem 0 18rem;
+    padding: 8rem 0 18rem;
     position: relative;
     z-index: 2;
 }
@@ -20,6 +20,7 @@
     max-width: 60%;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 /* learn more and video links */
@@ -74,10 +75,11 @@
 
     .image {
         max-width: 7rem;
+        opacity: 0.5;
         transition: $transitionRegular;
 
         &:hover {
-            opacity: 0.5;
+            opacity: 1;
         }
     }
 }
@@ -144,7 +146,7 @@
     }
 
     .homeIntro__inner {
-        padding: 10rem 0 15rem;
+        padding: 10rem 0 13rem;
     }
 
     .homeIntro__title,
@@ -157,6 +159,6 @@
     }
 
     .homeIntro__laptop {
-        margin-top: -10rem;
+        margin-top: -8rem;
     }
 }
