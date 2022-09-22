@@ -1,0 +1,149 @@
+@import '../../../../styles/variables.scss';
+
+.homeInsights__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 6rem;
+}
+
+/* wrapper for a title and buttons */
+.homeInsights__text {
+    width: 50%;
+}
+
+/* filter buttons */
+.homeInsights__buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 0.75rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+/* single filter button */
+.homeInsights__btn {
+    display: flex;
+    align-items: center;
+    width: calc(50% - 0.5rem);
+    padding: 1rem 0.75rem;
+    background-color: #ecf3ff;
+    border-radius: 12px;
+    transition: $transitionRegular;
+    cursor: pointer;
+    outline: none;
+
+    /* circle icon */
+    .homeInsights__btn-dot {
+        width: 12px;
+        margin-right: 0.75rem;
+
+        circle {
+            transition: $transitionRegular;
+        }
+    }
+
+    /* button text */
+    .homeInsights__btn-text {
+        color: $light-blue;
+        font-size: 1.1rem;
+        line-height: 130%;
+        text-align: left;
+        transition: $transitionRegular;
+    }
+
+    &:hover,
+    &:focus,
+    &.homeInsights__btn-active {
+        background-color: $light-blue;
+
+        .homeInsights__btn-text {
+            color: $white;
+        }
+    }
+
+    /* styles for a pressed button */
+    &.homeInsights__btn-active {
+        .homeInsights__btn-dot {
+            circle {
+                fill: $white;
+            }
+        }
+    }
+}
+
+/* wrapper for all of the images */
+.homeInsights__pictures {
+    width: 50%;
+    position: relative;
+}
+
+/* single image */
+.homeInsights__image {
+    opacity: 0;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    /* shown image */
+    &.homeInsights__image-active {
+        opacity: 1;
+        transition: opacity $transitionRegular;
+        position: relative !important;
+        z-index: 2;
+    }
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: $smallScreen) {
+    .homeInsights__inner {
+        flex-wrap: wrap;
+    }
+
+    .homeInsights__text {
+        width: 100%;
+    }
+
+    .homeInsights__title {
+        text-align: center;
+    }
+
+    .homeInsights__buttons {
+        width: 80%;
+        margin: 2rem auto 0;
+    }
+
+    .homeInsights__pictures {
+        width: 100%;
+    }
+
+    .homeInsights__image {
+        width: 80% !important;
+        margin: 0 auto;
+    }
+}
+
+/* tablets */
+@media (max-width: $tablet) {
+    .homeInsights__buttons {
+        width: 100%;
+    }
+
+    .homeInsights__image {
+        width: 100% !important;
+    }
+}
+
+/* mobile phones */
+@media (max-width: $phone) {
+    .homeInsights__inner {
+        padding-top: 4rem;
+    }
+
+    .homeInsights__btn {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+}

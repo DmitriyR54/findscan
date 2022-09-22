@@ -10,6 +10,7 @@ import { HeaderSection } from 'Sections/Header/Header';
 import { HomeIntroSection } from './homeSections/HomeIntro/HomeIntro';
 import { HomeAboutSection } from './homeSections/HomeAbout/HomeAbout';
 import { HomeVideoSection } from './homeSections/HomeVideo/HomeVideo';
+import { HomeInsightsSection } from './homeSections/HomeInsights/HomeInsights';
 // components
 import LazyLoad from 'Components/LazyLoad/LazyLoad';
 
@@ -23,6 +24,7 @@ const mainContainer = (container) => {
     HomeIntroSection(mainTag);
     HomeAboutSection(mainTag);
     HomeVideoSection(mainTag);
+    HomeInsightsSection(mainTag);
 
     return container.appendChild(mainTag);
 };

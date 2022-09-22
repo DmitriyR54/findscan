@@ -123,6 +123,10 @@
 }
 /* mobile phones */
 @media (max-width: $phone) {
+    .homeVideoSection{
+        margin-top: 4rem;
+    }
+    
     .homeVideo__inner {
         height: fit-content;
         border-radius: 1rem;
