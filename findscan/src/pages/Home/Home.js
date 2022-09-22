@@ -9,6 +9,7 @@ import 'Src/fonts/fonts.scss';
 import { HeaderSection } from 'Sections/Header/Header';
 import { HomeIntroSection } from './homeSections/HomeIntro/HomeIntro';
 import { HomeAboutSection } from './homeSections/HomeAbout/HomeAbout';
+import { HomeVideoSection } from './homeSections/HomeVideo/HomeVideo';
 // components
 import LazyLoad from 'Components/LazyLoad/LazyLoad';
 
@@ -21,6 +22,7 @@ const mainContainer = (container) => {
     // sections
     HomeIntroSection(mainTag);
     HomeAboutSection(mainTag);
+    HomeVideoSection(mainTag);
 
     return container.appendChild(mainTag);
 };

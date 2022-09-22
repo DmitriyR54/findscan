@@ -1,0 +1,155 @@
+@import '../../../../styles/variables.scss';
+
+.homeVideoSection {
+    margin-top: 6rem;
+}
+
+.homeVideo__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 400px;
+    border-radius: 2rem;
+    transition: 0.75s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+/* cover with a text and play button */
+.homeVideo__cover {
+    grid-row: 1;
+    grid-column: 1;
+    padding: 3rem 0 4rem;
+    background-color: rgba($light-blue, 0.85);
+    border-radius: 2rem;
+    text-align: center;
+    transition: 0.3s ease;
+    position: relative;
+    z-index: 2;
+
+    &.homeVideo__cover-hidden {
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+/* cover text */
+.homeVideo__title {
+    max-width: 60%;
+    margin: 0 auto 2rem;
+    color: $white;
+    font-size: 2rem;
+}
+
+/* play button */
+.homeVideo__play {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+
+    circle,
+    path {
+        transition: $transitionRegular;
+    }
+
+    &:hover,
+    &:focus {
+        circle {
+            fill: $white;
+        }
+
+        path {
+            fill: $light-blue;
+        }
+    }
+}
+
+/* wrapper for the <video> */
+.homeVideo__wrapper {
+    grid-row: 1;
+    grid-column: 1;
+    height: fit-content;
+    border-radius: 2rem;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* <video> item */
+#homeVideo__video {
+    min-height: 100%;
+}
+
+/* hide video library controls */
+/* video library 'play' button */
+.plyr__control.plyr__control--overlaid {
+    opacity: 0;
+}
+/* video library controls (progress, fullscreen, speed etc.) */
+.plyr__controls {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    opacity: 0;
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: $smallScreen) {
+    .homeVideo__inner {
+        height: 400px;
+    }
+
+    .homeVideo__cover {
+        padding: 3rem 1rem;
+    }
+
+    .homeVideo__title {
+        max-width: 90%;
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .homeVideo__play {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+/* tablet */
+@media (max-width: $tablet) {
+    .homeVideo__inner {
+        height: 300px;
+    }
+}
+/* mobile phones */
+@media (max-width: $phone) {
+    .homeVideo__inner {
+        height: fit-content;
+        border-radius: 1rem;
+    }
+
+    .homeVideo__cover {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .homeVideo__title {
+        max-width: 100%;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .homeVideo__play {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .homeVideo__wrapper {
+        border-radius: 1rem;
+    }
+
+    .plyr__controls {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+}
