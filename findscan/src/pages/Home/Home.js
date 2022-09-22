@@ -13,6 +13,7 @@ import { HomeVideoSection } from './homeSections/HomeVideo/HomeVideo';
 import { HomeInsightsSection } from './homeSections/HomeInsights/HomeInsights';
 import { HomeAboutSequelSection } from './homeSections/HomeAboutSequel/HomeAboutSequel';
 import { HomeFormSection } from './homeSections/HomeForm/HomeForm';
+import { FooterSection } from 'Sections/Footer/Footer';
 // components
 import LazyLoad from 'Components/LazyLoad/LazyLoad';
 
@@ -36,6 +37,7 @@ const mainContainer = (container) => {
 // sections
 HeaderSection(bodyContainer);
 mainContainer(bodyContainer);
+FooterSection(bodyContainer);
 
 // components
 LazyLoad();

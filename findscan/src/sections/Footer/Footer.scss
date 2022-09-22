@@ -1,0 +1,138 @@
+@import '../../styles/variables.scss';
+
+.footer {
+    background-color: $blue;
+}
+
+.footer__inner {
+    padding: 3rem 0 0.5rem;
+}
+
+/* wrapper for logo and links */
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* logo and text */
+.footer__companyInfo {
+    width: 30%;
+}
+
+.footer__companyInfo-text {
+    margin-top: 1rem;
+    color: $grey;
+    font-size: 0.9rem;
+}
+
+/* wrapper for links */
+.footer__links {
+    display: flex;
+    width: 60%;
+    padding-top: 1rem;
+}
+
+.footer__links-group {
+    width: 33.33333%;
+}
+
+.footer__links-title {
+    margin-bottom: 1rem;
+    color: $white;
+    font-weight: 400;
+}
+
+/* single link */
+.footer__link {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    color: $grey;
+    font-size: 0.9rem;
+    transition: $transitionRegular;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        color: $white;
+    }
+}
+
+/* bottom copyright */
+.footer__copyright {
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.footer__copyright-icon {
+    width: 0.75rem;
+    margin-right: 0.25rem;
+}
+
+.footer__copyright-text {
+    color: $grey;
+    font-size: 0.75rem;
+
+    .footer__copyright-text-highlight {
+        color: $white;
+    }
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: $smallScreen) {
+    .footer__links {
+        width: 65%;
+    }
+}
+
+/* tablet */
+@media (max-width: $tablet) {
+    .footer__top {
+        flex-wrap: wrap;
+    }
+
+    .footer__companyInfo {
+        width: 100%;
+    }
+
+    .footer__companyInfo-text {
+        max-width: 60%;
+    }
+
+    .footer__links {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .footer__copyright {
+        margin-top: 3rem;
+    }
+}
+
+/* mobile phones */
+@media (max-width: $phone) {
+    .footer__companyInfo-text {
+        max-width: 80%;
+    }
+
+    .footer__links {
+        flex-wrap: wrap;
+    }
+
+    .footer__links-group {
+        width: 100%;
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .footer__links-title {
+        font-size: 1.2rem;
+    }
+
+    .footer__link {
+        font-size: 1.1rem;
+    }
+}
