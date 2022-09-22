@@ -1,0 +1,85 @@
+@import '../../../../styles/variables.scss';
+
+.homeForm__section {
+    .container {
+        position: relative;
+    }
+}
+
+.homeForm__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem 3rem 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* wrapper for the title */
+.homeForm__text {
+    width: 40%;
+}
+
+/* main form */
+.homeForm__form {
+    width: 60%;
+    text-align: right;
+}
+
+/* email input */
+.homeForm__form-input {
+    margin-right: 0.75rem;
+    padding: 1rem;
+    color: $grey;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+
+    &::placeholder {
+        color: $grey;
+    }
+}
+
+/* submit button */
+.homeForm__form-submit {
+    display: inline-block;
+    padding: 1rem 3rem;
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: $smallScreen) {
+    .homeForm__inner {
+        flex-wrap: wrap;
+    }
+
+    .homeForm__text {
+        width: 100%;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .homeForm__form {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+/* tablets */
+@media (max-width: $tablet) {
+    .homeForm__form-input {
+        display: block;
+        margin: 0 auto 1rem;
+    }
+}
+
+/* mobile phones */
+@media (max-width: $phone) {
+    .homeForm__inner {
+        padding: 2rem 1rem;
+    }
+
+    .homeForm__form-input,
+    .homeForm__form-submit {
+        width: 90%;
+    }
+}

@@ -26,6 +26,7 @@
     text-align: center;
     transition: $transitionRegular;
     cursor: pointer;
+    outline: none;
 
     &.btn-primary {
         background-color: $light-blue;
@@ -106,7 +107,7 @@
 /* section borders
 html template
 insert it as a child of the 'container':
-<div class="section-borders">
+<div class="subsection-borders">
     <img src="../../../../images/icons/section-border-top-left.svg" alt="">
     <img src="../../../../images/icons/section-border-top-right.svg" alt="">
     <img src="../../../../images/icons/section-border-bottom-right.svg" alt="">
