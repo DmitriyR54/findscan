@@ -1,5 +1,6 @@
 import headerHtml from './Header.html';
 import './Header.scss';
+import { currentPageInfo } from './currentPageInfo';
 
 const HeaderSection = (container) => {
     container.innerHTML += headerHtml;
@@ -49,6 +50,10 @@ const HeaderSection = (container) => {
 
         headerScrollStyles();
         window.addEventListener('scroll', headerScrollStyles);
+
+        /* add styles for a current page link */
+        const headerNavLinks = document.querySelectorAll('.header__nav-link');
+        currentPageInfo(headerNavLinks);
     });
 };
 

@@ -87,6 +87,10 @@
             transform: translate3d(0, 0, 0);
         }
     }
+
+    &.header__nav-link-active {
+        opacity: 0.7;
+    }
 }
 
 /* burger button */

@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         homePage: './src/pages/Home/Home.js',
+        tokenPage: './src/pages/Token/Token.js',
     },
     output: {
         filename: 'scripts/[name].[contenthash].js',
@@ -54,6 +55,11 @@ module.exports = {
             template: './src/pages/Home/Home.html',
             filename: 'index.html',
             chunks: ['homePage'],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/Token/Token.html',
+            filename: 'pages/token.html',
+            chunks: ['tokenPage'],
         }),
     ],
     resolve: {
