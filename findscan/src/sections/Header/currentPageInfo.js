@@ -1,4 +1,6 @@
 const currentPageInfo = (links) => {
+    const currentLocation = window.location.pathname;
+
     links.forEach((link) => {
         const linkHref = link.getAttribute('href');
         const currentLocation = window.location.pathname;

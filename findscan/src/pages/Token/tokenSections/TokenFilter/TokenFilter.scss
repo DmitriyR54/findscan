@@ -1,0 +1,189 @@
+@import '../../../../styles/variables.scss';
+
+.tokenFilter__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 7rem 0 6rem;
+}
+
+/* wrapper for images */
+.tokenFilter__pictures {
+    width: 50%;
+    position: relative;
+}
+
+/* single image */
+.tokenFilter__image {
+    opacity: 0;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    /* shown image */
+    &.tokenFilter__image-active {
+        opacity: 1;
+        transition: opacity 0.7s;
+        position: relative !important;
+        z-index: 2;
+    }
+}
+
+/* wrapper for a title and buttons */
+.tokenFilter__text {
+    width: 50%;
+}
+
+/* wrapper for buttons */
+.tokenFilter__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.75rem;
+    row-gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* single filter button */
+.tokenFilter__btn {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0 0.3rem 0.75rem rgba(15, 77, 188, 0.2);
+    border-radius: 0.5rem;
+    text-align: left;
+    transition: $transitionRegular;
+    cursor: pointer;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        box-shadow: -3px 0.3rem 1rem rgba(15, 77, 188, 0.4);
+        transform: translate(3px, 3px);
+    }
+
+    /* active button */
+    &.tokenFilter__btn-active {
+        .tokenFilter__btn-icon {
+            background-color: $light-blue;
+
+            svg {
+                transform: scale(1);
+            }
+        }
+    }
+
+    /* aligning buttons */
+    &:nth-child(1) {
+        width: 35%;
+    }
+
+    &:nth-child(2) {
+        width: calc(65% - 0.75rem);
+    }
+
+    &:nth-child(3) {
+        width: 45%;
+    }
+
+    &:nth-child(4) {
+        width: 50%;
+    }
+
+    &:nth-child(5) {
+        width: 100%;
+    }
+}
+
+/* check mark icon */
+.tokenFilter__btn-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    transition: 0.3s linear;
+
+    svg {
+        width: 1rem;
+        transform: scale(0);
+        transition: 0.4s ease;
+    }
+}
+
+/* button main text */
+.tokenFilter__btn-text {
+    display: block;
+    color: $blue;
+    font-size: 0.9em;
+    line-height: 130%;
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: $smallScreen) {
+    .tokenFilter__inner {
+        flex-wrap: wrap-reverse;
+    }
+
+    .tokenFilter__text {
+        width: 100%;
+    }
+
+    .tokenFilter__title {
+        text-align: center;
+    }
+
+    .tokenFilter__buttons {
+        width: 80%;
+        margin: 2rem auto 0;
+    }
+
+    .tokenFilter__pictures {
+        width: 100%;
+    }
+
+    .tokenFilter__image {
+        width: 80% !important;
+        margin: 0 auto;
+    }
+}
+
+/* tablets */
+@media (max-width: $tablet) {
+    .tokenFilter__inner {
+        padding: 3rem 0;
+    }
+
+    .tokenFilter__buttons {
+        width: 100%;
+    }
+
+    .tokenFilter__image {
+        width: 100% !important;
+    }
+}
+
+/* mobile phones */
+@media (max-width: $phone) {
+    .tokenFilter__buttons {
+        row-gap: 1.25rem;
+    }
+
+    .tokenFilter__btn {
+        width: 100% !important;
+        box-shadow: 0 0.3rem 0.5rem rgba(15, 77, 188, 0.1);
+
+        &:hover,
+        &:focus {
+            box-shadow: -3px 0.3rem 0.75rem rgba(15, 77, 188, 0.2);
+        }
+    }
+
+    .tokenFilter__btn-text {
+        font-size: 1rem;
+    }
+}
