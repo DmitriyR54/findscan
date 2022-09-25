@@ -3,12 +3,16 @@
 .tokenFilter__inner {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     padding: 7rem 0 6rem;
 }
 
 /* wrapper for images */
 .tokenFilter__pictures {
     width: 50%;
+    opacity: 0;
+    transform: translate3d(0, 7rem, 0);
+    transition: 0.5s ease;
     position: relative;
 }
 
@@ -144,6 +148,7 @@
 
     .tokenFilter__pictures {
         width: 100%;
+        margin-top: 1rem;
     }
 
     .tokenFilter__image {
