@@ -1,0 +1,94 @@
+@import '../../../../styles/variables.scss';
+
+.tokenUtility__inner {
+    padding-bottom: 8rem;
+}
+
+.tokenUtility__title,
+.tokenUtility__subtitle {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* wrapper for the "utility" items */
+.tokenUtility__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+/* single "utility" item */
+.tokenUtility__item {
+    width: calc(25% - 0.75rem);
+    padding: 1rem;
+    background-color: #eaf2fe;
+    border-radius: 1.5rem;
+    /* hide an element and show it when it appears on user's screen */
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+
+    &.tokenUtility__item-show {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@for $i from 1 through 4 {
+    .tokenUtility__item:nth-child(#{$i}) {
+        transition: opacity 0.4s #{$i/8}s, transform 0.4s #{$i/8}s;
+    }
+}
+
+.tokenUtility__item-img {
+    width: 4rem !important;
+    margin-bottom: 1rem;
+}
+
+.tokenUtility__item-title {
+    margin-bottom: 0.75rem;
+    color: $blue;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.tokenUtility__item-text {
+    color: $grey;
+    font-weight: 300;
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: $smallScreen) {
+    .tokenUtility__title,
+    .tokenUtility__subtitle {
+        max-width: 80%;
+    }
+
+    .tokenUtility__wrapper {
+        flex-wrap: wrap;
+        row-gap: 1.5rem;
+    }
+
+    .tokenUtility__item {
+        width: calc(50% - 0.75rem);
+    }
+}
+
+/* mobile phones */
+@media (max-width: $phone) {
+    .tokenUtility__title,
+    .tokenUtility__subtitle {
+        max-width: 90%;
+    }
+
+    .tokenUtility__item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tokenUtility__item-img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

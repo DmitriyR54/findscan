@@ -10,6 +10,7 @@ import { HeaderSection } from 'Sections/Header/Header';
 import { TokenIntroSection } from './tokenSections/TokenIntro/TokenIntro';
 import { TokenFilterSection } from './tokenSections/TokenFilter/TokenFilter';
 import { TokenAboutSection } from './tokenSections/TokenAbout/TokenAbout';
+import { TokenUtilitySection } from './tokenSections/TokenUtility/TokenUtility';
 import { FooterSection } from 'Sections/Footer/Footer';
 // components
 import LazyLoad from 'Components/LazyLoad/LazyLoad';
@@ -24,6 +25,7 @@ const mainContainer = (container) => {
     TokenIntroSection(mainTag);
     TokenFilterSection(mainTag);
     TokenAboutSection(mainTag);
+    TokenUtilitySection(mainTag);
 
     return container.appendChild(mainTag);
 };
