@@ -11,6 +11,7 @@ import { TokenIntroSection } from './tokenSections/TokenIntro/TokenIntro';
 import { TokenFilterSection } from './tokenSections/TokenFilter/TokenFilter';
 import { TokenAboutSection } from './tokenSections/TokenAbout/TokenAbout';
 import { TokenUtilitySection } from './tokenSections/TokenUtility/TokenUtility';
+import { TokenRoadmapSection } from './tokenSections/TokenRoadmap/TokenRoadmap';
 import { FooterSection } from 'Sections/Footer/Footer';
 // components
 import LazyLoad from 'Components/LazyLoad/LazyLoad';
@@ -26,6 +27,7 @@ const mainContainer = (container) => {
     TokenFilterSection(mainTag);
     TokenAboutSection(mainTag);
     TokenUtilitySection(mainTag);
+    TokenRoadmapSection(mainTag);
 
     return container.appendChild(mainTag);
 };
@@ -42,5 +44,6 @@ window.addEventListener('DOMContentLoaded', () => {
     /* use a custom scrollbar but only on desktop devices */
     if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         const osInstance = OverlayScrollbars(document.querySelector('body'), {});
+        const roadmapScroll = OverlayScrollbars(document.querySelector('.tokenRoadmap__main'), {});
     }
 });

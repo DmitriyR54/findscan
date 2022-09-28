@@ -52,6 +52,7 @@
     },
     "dependencies": {
         "animated-scroll-to": "^2.3.0",
+        "embla-carousel": "^7.0.3",
         "overlayscrollbars": "^2.0.0-beta.2",
         "particles.js": "^2.0.0",
         "plyr": "^3.7.2"
