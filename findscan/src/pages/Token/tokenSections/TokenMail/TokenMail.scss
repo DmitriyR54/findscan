@@ -1,0 +1,58 @@
+@import '../../../../styles/variables.scss';
+
+.tokenMail {
+    .container {
+        position: relative;
+    }
+}
+
+.tokenMail__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem 3rem 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.tokenMail__logo {
+    width: 20rem;
+}
+
+/* link which open an email client */
+.tokenMail__link {
+    font-size: 1.25rem;
+
+    span {
+        display: block;
+    }
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: $smallScreen) {
+    .tokenMail__inner {
+        flex-wrap: wrap;
+    }
+
+    .tokenMail__text {
+        width: 100%;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    .tokenMail__logo,
+    .tokenMail__link {
+        margin: 0 auto;
+    }
+}
+
+/* mobile phones */
+@media (max-width: $phone) {
+    .tokenMail__inner {
+        padding: 2rem 1rem;
+    }
+
+    .tokenMail__text {
+        margin-bottom: 2rem;
+    }
+}

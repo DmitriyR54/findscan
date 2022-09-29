@@ -12,6 +12,8 @@ import { TokenFilterSection } from './tokenSections/TokenFilter/TokenFilter';
 import { TokenAboutSection } from './tokenSections/TokenAbout/TokenAbout';
 import { TokenUtilitySection } from './tokenSections/TokenUtility/TokenUtility';
 import { TokenRoadmapSection } from './tokenSections/TokenRoadmap/TokenRoadmap';
+import { TokenQuestionsSection } from './tokenSections/TokenQuestions/TokenQuestions';
+import { TokenMailSection } from './tokenSections/TokenMail/TokenMail';
 import { FooterSection } from 'Sections/Footer/Footer';
 // components
 import LazyLoad from 'Components/LazyLoad/LazyLoad';
@@ -28,6 +30,8 @@ const mainContainer = (container) => {
     TokenAboutSection(mainTag);
     TokenUtilitySection(mainTag);
     TokenRoadmapSection(mainTag);
+    TokenQuestionsSection(mainTag);
+    TokenMailSection(mainTag);
 
     return container.appendChild(mainTag);
 };

@@ -1,0 +1,86 @@
+@import '../../../../styles/variables.scss';
+
+.tokenQuestions {
+    background-color: #eaf3ff;
+}
+
+.tokenQuestions__inner {
+    padding: 8rem 0 5rem;
+}
+
+/* wrapper for a text item */
+.tokenQuestions__group {
+    display: flex;
+    justify-content: space-between;
+
+    &:first-child {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Q/A text */
+.tokenQuestions__title {
+    margin-top: -3rem;
+    color: $light-blue;
+    font-size: 10rem;
+}
+
+/* question/answer */
+.tokenQuestions__text {
+    width: 80%;
+    color: $blue;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    /* larger text */
+    &.tokenQuestions__text-lg {
+        font-size: 2rem;
+    }
+
+    .tokenQuestions__text-highlight {
+        color: $light-blue;
+    }
+
+    .tokenQuestions__text-paragraph {
+        margin-bottom: 1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* SCREEN ADAPTATION */
+@media (max-width: $smallScreen) {
+    .tokenQuestions__title {
+        font-size: 8rem;
+    }
+}
+
+/* tablets */
+@media (max-width: $tablet) {
+    .tokenQuestions__inner {
+        padding: 4rem 0 2rem;
+    }
+
+    .tokenQuestions__title {
+        margin-top: -2rem;
+        font-size: 6rem;
+    }
+
+    .tokenQuestions__text {
+        width: 85%;
+        font-size: 1.25rem;
+
+        &.tokenQuestions__text-lg {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/* mobile phones */
+@media (max-width: $phone) {
+    .tokenQuestions__text {
+        width: 75%;
+    }
+}
